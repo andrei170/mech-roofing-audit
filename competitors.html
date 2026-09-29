@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Competitor Analysis &middot; Mech Roofing and Gutter &middot; AG1 Consulting</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+/* ---------- injected asset nav ---------- */
+.agnav{position:sticky;top:0;z-index:80;background:rgba(13,17,23,.92);backdrop-filter:saturate(1.5) blur(10px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.agnav a{display:inline-block;padding:12px 14px;font-size:14px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.agnav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.ext{color:var(--accent)}
+.agnav a.ext:hover{color:#fff}
+@media(max-width:560px){.agnav .inner{padding:0 14px}.agnav a{padding:10px 9px;font-size:13px}}
+</style></head><body>
+<nav class="agnav"><div class="inner"><a href="assets.html">All Assets</a><a href="./">Audit</a><a href="competitors.html" class="on">Competitors</a><a href="https://andrei170.github.io/mech-roofing-demo/">Concept Site</a></div></nav>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Competitor Analysis &middot; Mech Roofing and Gutter &middot; Western North Carolina</div>
+    <div class="sub">Prepared for Austin Mech &middot; 29 September 2026 &middot; AG1 Consulting</div>
+    <h1>Every Competitor We Could Measure Runs Google Ads Conversion Tracking. You Are The Only One Who Does Not.</h1>
+
+    <div class="hero">
+      <div class="heroread">
+        <h2>Three western NC roofers, measured exactly as you were. This market is more sophisticated than most.</h2>
+        <p>We audit a lot of contractors. <b>In almost every market, nobody is tracking conversions and the
+        opportunity is to be the first.</b> Here, all three readable competitors already are.</p>
+        <p>That makes measurement urgent rather than clever.</p>
+        <div class="tag">Measured 29 September 2026 &bull; Same method on every site</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Comparison</div>
+    <div class="code">
+  FIRM                  WORDS  H1  H2  DESC  CANON  SCHEMA  GA4  GTM  ADS  PIXL  TEL
+  Secure Roofing        1,272   1  <span class="ok">14</span>   yes   yes    yes     <span class="ok">Y</span>    <span class="ok">Y</span>   <span class="ok">Y</span>    <span class="ok">Y</span>     <span class="ok">Y</span>
+  WNC Roofing           1,057   1  <span class="ok">17</span>   yes   yes    yes     <span class="ok">Y</span>    <span class="ok">Y</span>   <span class="ok">Y</span>    <span class="ok">Y</span>     <span class="ok">Y</span>
+  <span class="ph">Mech Roofing (you)    1,026   1   2</span>   <span class="ok">yes</span>   <span class="ok">yes</span>    <span class="ok">yes</span>     <span class="ph">-</span>    <span class="ph">-</span>   <span class="ph">-</span>    <span class="ok">Y</span>     <span class="ok">Y</span>
+  Woot Roofing            855   1   1   yes   yes    yes     <span class="ok">Y</span>    <span class="ok">Y</span>   <span class="ok">Y</span>    -     <span class="ok">Y</span>
+
+  Exterior Contractor   <span class="ph">-- returned a bot challenge, NOT measured</span>
+
+  All fetched 29 September 2026. Words exclude scripts and markup.
+    </div>
+    <div class="flag">
+      <div class="lab">Three columns, and they are the only three you lose</div>
+      <p><b>Description, canonical, schema, pixel, click-to-call &mdash; you match or beat the field on all of
+      them.</b> Your word count is second-highest of the four.</p>
+      <p><b>GA4, Tag Manager and conversion tracking are the three you are missing, and all three competitors have all
+      three.</b> Plus the subheading gap, which is structural rather than technical.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 1 &mdash; Even The Smallest Competitor Is Measuring</div>
+    <div class="code">
+  Woot Roofing            <span class="ph">855 words</span>  ·  <span class="ph">1 subheading</span>  ·  18 years
+  wootroofing.com/forest-city-nc/    <span class="ok">GA4 + Tag Manager + Ads conversion tag</span>
+  Owens Corning Preferred · 50-year warranty · seamless gutters
+    </div>
+    <div class="warn">
+      <div class="lab">This is the one to look at hardest, because they are directly on your ground</div>
+      <p><b>Woot has a page built specifically for Forest City</b> &mdash; your town &mdash; with fewer words and
+      fewer subheadings than you, and they still run the full measurement stack.</p>
+      <p><b>They have less content and better information.</b> They know which of those 855 words produces a phone
+      call and you do not know which of your 1,026 does.</p>
+      <p><b>They also lead with the Owens Corning Preferred status and a 50-year warranty.</b> If you hold a
+      manufacturer certification, it should be as visible on your site as theirs is on theirs.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 2 &mdash; WNC And Secure Show What The Subheading Gap Costs</div>
+    <div class="code">
+  WNC Roofing           1,057 words  ·  <span class="ok">17 H2</span>  ·  full stack + pixel
+  Secure Roofing        1,272 words  ·  <span class="ok">14 H2</span>  ·  full stack + pixel
+  <span class="ph">Mech Roofing          1,026 words  ·   2 H2</span>
+    </div>
+    <div class="win">
+      <div class="lab">Almost identical word counts. Completely different pages.</div>
+      <p><b>WNC publishes thirty-one more words than you and splits them across seventeen sections.</b> That is not
+      more writing &mdash; it is the same amount of writing, organised.</p>
+      <p><b>Each subheading is a question answered:</b> what a new roof costs, how long it takes, whether insurance
+      covers it, what happens with the old shingles. A homeowner scanning on a phone lands on the one that matters to
+      them.</p>
+      <p><b>This is the cheapest content win available to you</b>, because the material is already on your page.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 3 &mdash; Where You Already Match Or Beat Them</div>
+    <div class="code">
+  <span class="ok">Structured data</span>       you publish RoofingContractor AND WebSite,
+                        with a full street address -- as good as any
+  <span class="ok">Meta description</span>      specific to Forest City, not generic
+  <span class="ok">Canonical</span>             correct
+  <span class="ok">Click-to-call</span>         4 links -- more than most of the field
+  <span class="ok">Meta pixel</span>            live (Woot does not have one)
+  <span class="ok">Word count</span>            2nd of 4
+  <span class="ok">Service range</span>         roofing, gutters, decks, insurance work,
+                        pressure washing, gallery, recent projects
+    </div>
+    <div class="win">
+      <div class="lab">Worth saying plainly</div>
+      <p><b>You are not the weakest site in this market.</b> On seven measures you are level with or ahead of firms
+      ranking around you, and your schema is as complete as anyone's.</p>
+      <p><b>The gap is narrow and specific.</b> That is a much better position than a site that needs rebuilding, and
+      it means the work is cheap.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What This Field Tells Us To Do</div>
+    <ul class="road">
+      <li><b>Close the measurement gap first.</b> GA4, Tag Manager, conversion tracking. Three competitors have all
+      three and it is the only place you are genuinely behind.</li>
+      <li><b>Restructure the homepage to WNC's shape</b> &mdash; ten to seventeen subheadings, same words.</li>
+      <li><b>Put any manufacturer certification where Woot puts theirs,</b> at the top.</li>
+      <li><b>Extend the service-area pages.</b> You have three, the pattern is right, and no competitor has locked up
+      the smaller towns.</li>
+      <li><b>Then paid,</b> once conversions are counted, aimed at towns that have a page behind them.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>You match this field on seven measures and lose on three.</h2>
+    <p>All three are the same fix, and it is an afternoon.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 29 September 2026, for Austin Mech.
+    <b>All measured sites were fetched on 29 September 2026 by the same method and measured on the same criteria. Word
+    counts exclude scripts, styles and markup. Analytics, Tag Manager, Google Ads and Meta pixel detection was
+    performed on the served homepage or landing page named. A tag absent from one page may exist elsewhere on that
+    site or be deployed through a system not visible externally &mdash; these figures describe the page as served, not
+    the whole of any firm's marketing.</b>
+    <b>&#9888; Exterior Contractor (extroof.com) returned an automated-request challenge and was NOT measured. No word
+    count, tag or grade has been estimated for them and nothing has been inferred from it.</b>
+    <b>&#9888; Competitor selection came from a public search for Forest City and Hendersonville NC roofing
+    contractors on 29 September 2026. It is not a complete list of firms operating in western North Carolina and
+    ranking positions were not recorded. Years in business, manufacturer certifications and warranty claims are as
+    published on each firm's own website and have not been independently verified by AG1.</b>
+    <b>&#9888; No ranking, enquiry, call, lead, job volume or revenue outcome is promised, forecast or guaranteed.
+    Nothing here asserts that matching any competitor's structure produces any result.</b>
+    Product and company names are used for identification only and belong to their respective owners.
+  </div>
+</footer>
+</body></html>
